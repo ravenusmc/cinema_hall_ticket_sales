@@ -1,20 +1,35 @@
 <template>
-  <div id="app">
+  <div id="app" class="layout">
+    <NavBar />
     <router-view></router-view>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import NavBar from "./components/common/NavBar.vue";
 
 export default {
   name: 'App',
-  // components: {
-  //   HelloWorld
-  // }
+  components: {
+    NavBar
+  }
 }
 </script>
 
 <style>
+/* Ensure no margin or padding disturbs the layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the height covers the full viewport */
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+
 </style>

@@ -80,7 +80,7 @@
     width: 300px;
     height: 400px; /* Set height to match width */
     border-radius: 10px;
-    /* background: url("../assets/images/Cuddy.jpg") center/cover no-repeat;  */
+    background: url("../assets/images/Cuddy.jpg") center/cover no-repeat;
   }
   
   .bio_div {
