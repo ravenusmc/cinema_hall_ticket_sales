@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="layout">
-    <NavBar />
+    <!-- <NavBar /> -->
+    <NavBar v-if="$route.name !== 'home'" />
     <router-view></router-view>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
