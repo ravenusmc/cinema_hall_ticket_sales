@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="main-background-div">
-      <div class="inner-graph">
+      <div class="inner-div">
         <h1>Welcome</h1>
-        <p>See The Data</p>
+        <p>Examine The Data</p>
       </div>
     </div>
   </div>
@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style>
+
 .main-background-div {
   width: 100%;
   height: 100vh; /* Full viewport height */
@@ -24,7 +25,7 @@ export default {
   top: 0;
   left: 0;
   z-index: -1; /* Keep it behind the content */
-  animation: zoomEffect 20s ease-in; /* Apply animation */
+  animation: zoomEffect 15s ease-in forwards; /* Apply animation and keep final state */
 }
 
 @keyframes zoomEffect {
@@ -32,28 +33,25 @@ export default {
     background-size: 100%; /* Start at normal size */
     background-position: center center; /* Start at the center */
   }
-  50% {
-    background-size: 120%; /* Zoom in to 120% */
-    background-position: center top; /* Move the image upwards */
-  }
   100% {
-    background-size: 100%; /* Reset to original size */
-    background-position: center center; /* Reset to center */
+    background-size: 120%; /* Zoom in to 120% and stay */
+    background-position: center top; /* Move the image upwards */
   }
 }
 
-.inner-graph {
+.inner-div {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid red;
+  border: 2px solid black;
   padding: 20px;
   background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
   text-align: center;
-  opacity: 0; /* Initially invisible */
+  opacity: 0; /* Initially hidden */
   animation: fadeIn 1s ease-in forwards;
-  animation-delay: 7s; /* Delays appearance */
+  animation-delay: 15s; /* Delays appearance until zoom is complete */
 }
 
 @keyframes fadeIn {
@@ -62,6 +60,8 @@ export default {
   }
   100% {
     opacity: 1;
+    top: 50%; /* Ensure it remains centered */
   }
 }
+
 </style>
