@@ -2,8 +2,9 @@
   <div>
     <div class="main-background-div">
       <div class="inner-div">
-        <h1>Welcome</h1>
-        <p>Examine The Data</p>
+        <h1 class="title">Welcome</h1>
+        <hr>
+        <h3 class="sub-title">Examine The Data</h3>
       </div>
     </div>
   </div>
@@ -15,7 +16,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 .main-background-div {
   width: 100%;
@@ -25,7 +26,7 @@ export default {
   top: 0;
   left: 0;
   z-index: -1; /* Keep it behind the content */
-  animation: zoomEffect 15s ease-in forwards; /* Apply animation and keep final state */
+  animation: zoomEffect 5s ease-in forwards; /* Apply animation and keep final state */
 }
 
 @keyframes zoomEffect {
@@ -40,18 +41,19 @@ export default {
 }
 
 .inner-div {
+  width: 45%;
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 55%;
+  left: 48%;
   transform: translate(-50%, -50%);
   border: 2px solid black;
   padding: 20px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   text-align: center;
-  opacity: 0; /* Initially hidden */
+  opacity: 0; 
   animation: fadeIn 1s ease-in forwards;
-  animation-delay: 15s; /* Delays appearance until zoom is complete */
+  animation-delay: 5s; 
 }
 
 @keyframes fadeIn {
@@ -60,8 +62,18 @@ export default {
   }
   100% {
     opacity: 1;
-    top: 50%; /* Ensure it remains centered */
+    top: 45%; /* Ensure it remains centered */
   }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+.sub-title {
+  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 </style>
