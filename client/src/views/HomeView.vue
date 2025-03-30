@@ -41,10 +41,11 @@ export default {
 }
 
 .inner-div {
-  width: 45%;
+  width: 80%; /* Use percentage instead of fixed pixel value */
+  max-width: 600px; /* Set a maximum width to prevent it from growing too large */
   position: absolute;
-  top: 55%;
-  left: 48%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid black;
   padding: 20px;
@@ -68,12 +69,44 @@ export default {
 
 .title {
   text-transform: uppercase;
-  font-size: 5rem;
+  font-size: 5vw; /* Use viewport width for responsive scaling */
+  line-height: 1.2;
 }
 
 .sub-title {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 3vw; /* Use viewport width for responsive scaling */
+  line-height: 1.2;
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .inner-div {
+    width: 90%; /* Take up more width on smaller screens */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .title {
+    font-size: 8vw; /* Scale title for smaller screens */
+  }
+
+  .sub-title {
+    font-size: 5vw; /* Scale subtitle for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .inner-div {
+    width: 95%; /* Use almost full width on very small screens */
+  }
+
+  .title {
+    font-size: 10vw; /* Scale even more for very small screens */
+  }
+
+  .sub-title {
+    font-size: 6vw; /* Scale even more for very small screens */
+  }
 }
 
 </style>
