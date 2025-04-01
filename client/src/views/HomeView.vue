@@ -3,7 +3,7 @@
     <div class="content">
       <h1 class="title">Welcome</h1>
       <hr />
-      <h3 class="sub-title">Examine The Data</h3>
+      <h3 class="sub-title"><router-link class="link-style" to="/data">Examine The Data</router-link></h3>
     </div>
   </div>
 </template>
