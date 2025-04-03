@@ -1,0 +1,19 @@
+Basic Graphs
+Bar Chart: Ticket Sales by Movie Genre – Show how many tickets were sold per genre.
+
+Histogram: Age Distribution – Visualize the age groups of customers.
+
+Boxplot: Ticket Price by Seat Type – Compare prices for different seat types.
+
+Pie Chart: Proportion of Repeat Customers – Show how many customers purchased again.
+
+Stacked Bar Chart: Seat Type Preference by Genre – Compare how many VIP vs. Standard seats were sold per genre.
+
+Simple AI-Enhanced Graphs
+Linear Regression: Age vs. Ticket Price – Use AI to predict ticket price trends based on age.
+
+Clustering (K-Means): Customer Segmentation – Group customers based on age, ticket price, and purchase behavior.
+
+Prediction Heatmap: Purchase Again Probability – Use a simple decision tree to estimate the likelihood of repeat purchases based on ticket price and seat type.
+
+Sentiment Analysis on Movie Genre Popularity – Use AI to classify high vs. low sales for each genre and visualize trends.
