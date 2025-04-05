@@ -17,3 +17,9 @@ Clustering (K-Means): Customer Segmentation – Group customers based on age, ti
 Prediction Heatmap: Purchase Again Probability – Use a simple decision tree to estimate the likelihood of repeat purchases based on ticket price and seat type.
 
 Sentiment Analysis on Movie Genre Popularity – Use AI to classify high vs. low sales for each genre and visualize trends.
+
+*******
+Good Reference Project: 
+Link to graphs: 
+https://github.com/ravenusmc/israel_project/tree/main/client/src/components/graphs
+
