@@ -11,8 +11,10 @@ class ExamineData():
   
   #Ticket Sales by Movie Genre – Show how many tickets were sold per genre.
   def ticket_sales(self):
-    group by Movie_Genre then get count. 
-    pass
+    #group by Movie_Genre then get count. 
+    genre_counts = self.data['Movie_Genre'].value_counts()
+    print(genre_counts)
+
           
 
 obj = ExamineData()
