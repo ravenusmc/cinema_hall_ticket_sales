@@ -14,6 +14,7 @@ class ExamineData():
     #group by Movie_Genre then get count. 
     genre_counts = self.data['Movie_Genre'].value_counts()
     print(genre_counts)
+    #return genre_counts
 
           
 
