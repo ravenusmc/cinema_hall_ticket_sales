@@ -16,6 +16,8 @@ class ExamineData():
     print(genre_counts)
     #return genre_counts
 
+  def second_graph(self):
+
           
 
 obj = ExamineData()
