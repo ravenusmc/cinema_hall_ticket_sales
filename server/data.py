@@ -16,10 +16,17 @@ class ExamineData():
     print(genre_counts)
     #return genre_counts
 
-  def second_graph(self):
-
+  #Histogram: Age Distribution – Visualize the age groups of customers.
+  def age_graph(self):
+    bins = [10, 20, 30, 40, 50, 60]
+    labels = ['10-20', '20-30', '31-40', '41-50', '51-60']
+    # Create an age group column
+    self.data['Age_Group'] = pd.cut(self.data['Age'], bins=bins, labels=labels, right=True, include_lowest=True)
+    # Get the age group distribution
+    age_group_distribution = self.data['Age_Group'].value_counts().sort_index()
+    print(age_group_distribution)
           
 
 obj = ExamineData()
-obj.ticket_sales()
+obj.age_graph()
       
