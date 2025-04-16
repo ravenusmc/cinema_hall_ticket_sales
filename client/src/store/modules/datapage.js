@@ -13,10 +13,18 @@ const data = {
         ['Drama',286],
         ['Sci-Fi',258],
     ],
+	ageRangeData: [
+		['10-20',100],
+		['20-30',338],
+		['31-40',329],
+		['41-50',338],
+		['51-60',335],
+	],
 };
 
 const getters = {
 	ticketSalesByMovieGenre: (state) => state.ticketSalesByMovieGenre,
+	ageRangeData: (state) => state.ageRangeData,
 };
 
 const actions = {
@@ -62,6 +70,10 @@ const mutations = {
 
 	setTicketSalesByMovieGenre(state, value) {
 		state.ticketSalesByMovieGenre = value;
+	},
+
+	setAgeRangeData(state, value) {
+		state.ageRangeData = value;
 	},
 
 };
