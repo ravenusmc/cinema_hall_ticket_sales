@@ -1,22 +1,26 @@
 <template>
     <div>
+      <div ref="ageRangeGraph"></div>
         Histogram: Age Distribution – Visualize the age groups of customers.
     </div>
 </template>
 
 <script>
+import * as d3 from "d3";
+import { mapGetters } from "vuex";
+
 export default {
   name: "AgeGraph",
   computed: {
     ...mapGetters("datapage", [
-      "ticketSalesByMovieGenre",
+      "ageRangeData",
     ]),
   },
   mounted() {
-    this.TicketSalesByGenre();
+    this.buildAgeRangeGraph();
   },  
   methods: {
-    TicketSalesByGenre() {
+    buildAgeRangeGraph() {
       
       // set the dimensions and margins of the graph
       let margin = { top: 50, right: 30, bottom: 50, left: 70 };
@@ -25,7 +29,7 @@ export default {
 
       // append the svg object to the div
       let svg = d3
-        .select(this.$refs.TicketSalesByGenre)
+        .select(this.$refs.ageRangeGraph)
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -36,7 +40,7 @@ export default {
       let x = d3
         .scaleBand()
         .range([0, width])
-        .domain(this.ticketSalesByMovieGenre.map((d) => d[0]))
+        .domain(this.ageRangeData.map((d) => d[0]))
         .padding(0.2);
       svg
         .append("g")
@@ -46,13 +50,13 @@ export default {
       // Add Y axis
       let y = d3
         .scaleLinear()
-        .domain([0, d3.max(this.ticketSalesByMovieGenre, (d) => d[1])])
+        .domain([0, d3.max(this.ageRangeData, (d) => d[1])])
         .range([height, 0]);
       svg.append("g").call(d3.axisLeft(y));
       
       // Create a tooltip div
       let tooltip = d3
-        .select(this.$refs.TicketSalesByGenre)
+        .select(this.$refs.ageRangeGraph)
         .append("div")
         .style("opacity", 0)
         .attr("class", "tooltip")
@@ -85,7 +89,7 @@ export default {
       // Add bars
       let bars = svg
         .selectAll("rect")
-        .data(this.ticketSalesByMovieGenre);
+        .data(this.ageRangeData);
       
         // Enter new bars
         bars

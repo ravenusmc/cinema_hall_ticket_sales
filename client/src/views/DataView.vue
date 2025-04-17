@@ -2,11 +2,13 @@
     <div>
       <h1>Data</h1>
       <TicketSales />
+      <AgeGraph />
     </div>
 </template>
 
 <script>
 import TicketSales from '@/components/graphs/TicketSales.vue'
+import AgeGraph from '@/components/graphs/AgeGraph.vue'
 
 export default {
 	name: "DataView",
@@ -17,6 +19,7 @@ export default {
   // },
 	components: {
     TicketSales,
+    AgeGraph,
   },
 };
 </script>
