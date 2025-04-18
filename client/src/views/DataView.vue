@@ -1,8 +1,10 @@
 <template>
     <div>
       <h1>Data</h1>
-      <TicketSales />
-      <AgeGraph />
+      <div class="graph-area">
+        <TicketSales />
+        <AgeGraph />
+      </div>
     </div>
 </template>
 
@@ -25,5 +27,9 @@ export default {
 </script>
 
 <style scoped>
+
+.graph-area {
+  border: 2px solid red; 
+}
 
 </style>
