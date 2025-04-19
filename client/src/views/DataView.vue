@@ -14,11 +14,6 @@ import AgeGraph from '@/components/graphs/AgeGraph.vue'
 
 export default {
 	name: "DataView",
-  // computed: {
-  //   ...mapGetters("datapage", [
-  //     "hideInjuryGraph",
-  //   ]),
-  // },
 	components: {
     TicketSales,
     AgeGraph,
@@ -29,6 +24,8 @@ export default {
 <style scoped>
 
 .graph-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   border: 2px solid red; 
 }
 

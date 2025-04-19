@@ -1,7 +1,6 @@
 <template>
     <div>
       <div ref="ageRangeGraph"></div>
-        Histogram: Age Distribution – Visualize the age groups of customers.
     </div>
 </template>
 
@@ -116,7 +115,7 @@ export default {
         .attr("y", height + margin.bottom - 10) // Adjusted y position to be within the SVG
         .attr("font-size", "12px")
         .attr("font-weight", "bold")
-        .text("Genre");
+        .text("Age Group");
       
       // Add Y axis label
       svg
@@ -127,7 +126,7 @@ export default {
         .attr("y", -margin.left + 20)
         .attr("font-size", "12px")
         .attr("font-weight", "bold")
-        .text("Ticket Sales");
+        .text("Count");
       
        // Add title
       svg
@@ -137,7 +136,7 @@ export default {
         .attr("y", -margin.top / 2 + 10) // Adjusted y position to be within the SVG
         .attr("font-size", "16px")
         .attr("font-weight", "bold")
-        .text("Ticket Sales by Movie Genre");
+        .text("Age Distribution");
 
 
     }
