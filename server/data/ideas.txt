@@ -1,7 +1,7 @@
 Basic Graphs
 Bar Chart: Ticket Sales by Movie Genre – Show how many tickets were sold per genre. - DONE
 
-Histogram: Age Distribution – Visualize the age groups of customers.
+Histogram: Age Distribution – Visualize the age groups of customers. - DONE
 
 Boxplot: Ticket Price by Seat Type – Compare prices for different seat types.
 

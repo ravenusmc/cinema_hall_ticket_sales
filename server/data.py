@@ -25,8 +25,22 @@ class ExamineData():
     # Get the age group distribution
     age_group_distribution = self.data['Age_Group'].value_counts().sort_index()
     print(age_group_distribution)
+  
+  #Proportion of Repeat Customers – Show how many customers purchased again.
+  def repeat_customers(self):
+    data_list =[]
+    value_list = ['Yes', 'No']
+    for value in value_list:
+      rows = []
+      filtered_df = self.data[self.data['Purchase_Again'] == value]
+      count_df = filtered_df['Purchase_Again'].value_counts()
+      count = int(count_df.iloc[0])
+      rows.append(value)
+      rows.append(count)
+      data_list.append(rows)
+    print(data_list)
           
 
 obj = ExamineData()
-obj.age_graph()
+obj.repeat_customers()
       
