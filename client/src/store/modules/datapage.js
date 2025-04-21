@@ -20,11 +20,16 @@ const data = {
 		['41-50',338],
 		['51-60',335],
 	],
+	repeatCustomersData: [
+		['Yes', 707], 
+		['No', 733],
+	]
 };
 
 const getters = {
 	ticketSalesByMovieGenre: (state) => state.ticketSalesByMovieGenre,
 	ageRangeData: (state) => state.ageRangeData,
+	repeatCustomersData: (state) => state.repeatCustomersData,
 };
 
 const actions = {
@@ -75,6 +80,10 @@ const mutations = {
 	setAgeRangeData(state, value) {
 		state.ageRangeData = value;
 	},
+
+	setRepeatCustomersData(state, value) {
+		state.repeatCustomersData = value;
+	}
 
 };
 

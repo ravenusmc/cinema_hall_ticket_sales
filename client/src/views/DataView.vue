@@ -4,6 +4,7 @@
       <div class="graph-area">
         <TicketSales />
         <AgeGraph />
+        <RepeatCustomer />
       </div>
     </div>
 </template>
@@ -11,12 +12,14 @@
 <script>
 import TicketSales from '@/components/graphs/TicketSales.vue'
 import AgeGraph from '@/components/graphs/AgeGraph.vue'
+import RepeatCustomer from '@/components/graphs/RepeatCustomer.vue'
 
 export default {
 	name: "DataView",
 	components: {
     TicketSales,
     AgeGraph,
+    RepeatCustomer,
   },
 };
 </script>
