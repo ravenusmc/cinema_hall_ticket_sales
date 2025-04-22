@@ -1,6 +1,6 @@
 <template>
     <div>
-        test
+      <div ref="repeatCustomerGraph"></div>
     </div>
 </template>
 
