@@ -137,8 +137,6 @@ export default {
         .attr("font-size", "16px")
         .attr("font-weight", "bold")
         .text("Age Distribution");
-
-
     }
   }
 };
