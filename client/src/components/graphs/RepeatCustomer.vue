@@ -128,7 +128,7 @@ export default {
         .attr("font-weight", "bold")
         .text("Count");
       
-       // Add title
+      // Add title
       svg
         .append("text")
         .attr("text-anchor", "middle")
@@ -136,7 +136,7 @@ export default {
         .attr("y", -margin.top / 2 + 10) // Adjusted y position to be within the SVG
         .attr("font-size", "16px")
         .attr("font-weight", "bold")
-        .text("Age Distribution");
+        .text("Repeat Customers");
     }
   }
 }
