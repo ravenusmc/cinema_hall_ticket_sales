@@ -128,7 +128,7 @@ export default {
         .attr("font-weight", "bold")
         .text("Count");
       
-      // Add title
+      //title
       svg
         .append("text")
         .attr("text-anchor", "middle")
