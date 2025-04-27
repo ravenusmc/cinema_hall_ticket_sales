@@ -5,7 +5,7 @@ Histogram: Age Distribution – Visualize the age groups of customers. - DONE
 
 Boxplot: Ticket Price by Seat Type – Compare prices for different seat types.
 
-Pie Chart: Proportion of Repeat Customers – Show how many customers purchased again.
+Pie Chart: Proportion of Repeat Customers – Show how many customers purchased again. - DONE
 
 Stacked Bar Chart: Seat Type Preference by Genre – Compare how many VIP vs. Standard seats were sold per genre.
 
