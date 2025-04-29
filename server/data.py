@@ -42,6 +42,12 @@ class ExamineData():
   
   #Stacked Bar Chart: Seat Type Preference by Genre – Compare how many VIP vs. Standard seats were sold per genre.
   def seat_preference_by_genre(self):
+    genres = self.data['Movie_Genre'].unique()
+    seat_types = self.data['Seat_Type'].unique()
+    seat_preferences = [] 
+    for genre in genres: 
+      
+
     #have to sort by genre and then find out the two seat preferences by genre - Standard, Premium and VIP 
     # I think my data will look like this: 
     # [
@@ -50,5 +56,5 @@ class ExamineData():
           
 
 obj = ExamineData()
-obj.repeat_customers()
+obj.seat_preference_by_genre()
       
