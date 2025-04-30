@@ -45,8 +45,21 @@ class ExamineData():
     genres = self.data['Movie_Genre'].unique()
     seat_types = self.data['Seat_Type'].unique()
     seat_preferences = [] 
-    for genre in genres: 
-      
+    columns = ['Genre', 'Standard', 'VIP','Premium']
+    seat_preferences.append(columns)
+    for genre in genres:
+      rows = [] 
+      filtered_df = self.data[self.data['Movie_Genre'] == genre]
+      rows.append(genre)
+      for seat in seat_types:
+        df = filtered_df
+        seat_type_df = df[df['Seat_Type'] == seat]
+        seat_type_counts = seat_type_df['Seat_Type'].value_counts()
+        count = int(seat_type_counts.iloc[0])
+        rows.append(count)
+      seat_preferences.append(rows)
+    print(seat_preferences)
+
 
     #have to sort by genre and then find out the two seat preferences by genre - Standard, Premium and VIP 
     # I think my data will look like this: 
