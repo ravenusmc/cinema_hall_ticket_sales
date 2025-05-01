@@ -24,12 +24,20 @@ const data = {
 		['Yes', 707], 
 		['No', 733],
 	]
+	seatPreferanceData: [
+		['Genre', 'Standard', 'VIP', 'Premium'], 
+		['Comedy', 91, 103, 93], 
+		['Drama', 102, 89, 95], 
+		['Horror', 92, 108, 99], 
+		['Action', 100, 104, 106], 
+		['Sci-Fi', 90, 90, 78]], 
 };
 
 const getters = {
 	ticketSalesByMovieGenre: (state) => state.ticketSalesByMovieGenre,
 	ageRangeData: (state) => state.ageRangeData,
 	repeatCustomersData: (state) => state.repeatCustomersData,
+	seatPreferanceData: (state) => state.seatPreferanceData,
 };
 
 const actions = {
