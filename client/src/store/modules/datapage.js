@@ -23,7 +23,7 @@ const data = {
 	repeatCustomersData: [
 		['Yes', 707], 
 		['No', 733],
-	]
+	],
 	seatPreferanceData: [
 		['Genre', 'Standard', 'VIP', 'Premium'], 
 		['Comedy', 91, 103, 93], 
@@ -91,6 +91,10 @@ const mutations = {
 
 	setRepeatCustomersData(state, value) {
 		state.repeatCustomersData = value;
+	},
+
+	setSeatPreferanceData(state, value) {
+		state.seatPreferanceData = value;
 	}
 
 };
