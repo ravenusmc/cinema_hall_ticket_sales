@@ -5,6 +5,7 @@
         <TicketSales />
         <AgeGraph />
         <RepeatCustomer />
+        <SeatPrefGraph />
       </div>
     </div>
 </template>
@@ -13,6 +14,7 @@
 import TicketSales from '@/components/graphs/TicketSales.vue'
 import AgeGraph from '@/components/graphs/AgeGraph.vue'
 import RepeatCustomer from '@/components/graphs/RepeatCustomer.vue'
+import SeatPrefGraph from '@/components/graphs/SeatPrefGraph.vue'
 
 export default {
 	name: "DataView",
@@ -20,6 +22,7 @@ export default {
     TicketSales,
     AgeGraph,
     RepeatCustomer,
+    SeatPrefGraph,
   },
 };
 </script>

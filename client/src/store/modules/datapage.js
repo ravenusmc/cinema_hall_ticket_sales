@@ -57,26 +57,6 @@ const actions = {
 	// 			console.log(error);
 	// 		});
 	// },
-
-	// submitSelectedInjuryAndYearToServer: ({commit}, { payload }) => {
-	// 	commit('setYearTwo', payload['yearTwo'])
-	// 	const path = 'http://localhost:5000/getDataForGraphsTwo';
-	// 	axios.post(path, payload)
-	// 	.then((res) => {
-    //   		console.log(res.data)
-	// 		if (res.data['injury_data']['Israeli Count'] === 0 && res.data['injury_data']['Palestinian Count'] === 0) {
-	// 			commit('setHideInjuryGraph', true)
-	// 		}else {
-	// 			commit('setHideInjuryGraph', false)
-	// 		}
-	// 		commit('setTypeOfInjuryData', res.data['injury_data'])
-	// 		commit('setTypeOfAmmoData', res.data['ammo_data'])
-	// 		commit('setKilledByData', res.data['killed_by_data'])
-	// 	})
-	// 	.catch((error) => {
-	// 		console.log(error);
-	// 	});
-	// },
 };
 
 const mutations = {
