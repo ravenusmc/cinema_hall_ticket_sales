@@ -59,13 +59,11 @@ class ExamineData():
         rows.append(count)
       seat_preferences.append(rows)
     print(seat_preferences)
+  
+  #Boxplot: Ticket Price by Seat Type – Compare prices for different seat types.
+  def ticket_price_by_seat_type(self)
+    pass
 
-
-    #have to sort by genre and then find out the two seat preferences by genre - Standard, Premium and VIP 
-    # I think my data will look like this: 
-    # [
-    #   [genre, seat type 1, seat type 2, seat type 3]
-    # ]
           
 
 obj = ExamineData()
