@@ -61,11 +61,14 @@ class ExamineData():
     print(seat_preferences)
   
   #Boxplot: Ticket Price by Seat Type – Compare prices for different seat types.
-  def ticket_price_by_seat_type(self)
-    pass
+  def ticket_price_by_seat_type(self):
+    # Convert ticket price to numeric if needed and group by Seat_Type
+    summary = self.data.groupby("Seat_Type")["Ticket_Price"].describe()
+    print("Boxplot Summary Statistics for Ticket Price by Seat Type:")
+    print(summary)
 
           
 
 obj = ExamineData()
-obj.seat_preference_by_genre()
+obj.ticket_price_by_seat_type()
       
