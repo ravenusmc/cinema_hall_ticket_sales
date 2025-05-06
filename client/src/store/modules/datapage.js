@@ -31,6 +31,11 @@ const data = {
 		['Horror', 92, 108, 99], 
 		['Action', 100, 104, 106], 
 		['Sci-Fi', 90, 90, 78]], 
+	ticketPriceSeatPrice: [
+		{'seat_type': 'Premium', 'min': 10.01, 'q1': 13.815000000000001, 'median': 17.37, 'q3': 21.435000000000002, 'max': 24.99}, 
+		{'seat_type': 'Standard', 'min': 10.03, 'q1': 13.475000000000001, 'median': 16.67, 'q3': 21.26, 'max': 24.97}, 
+		{'seat_type': 'VIP', 'min': 10.03, 'q1': 13.585, 'median': 17.655, 'q3': 21.4175, 'max': 24.98}
+	],
 };
 
 const getters = {
@@ -38,6 +43,7 @@ const getters = {
 	ageRangeData: (state) => state.ageRangeData,
 	repeatCustomersData: (state) => state.repeatCustomersData,
 	seatPreferanceData: (state) => state.seatPreferanceData,
+	ticketPriceSeatPrice: (state) => state.ticketPriceSeatPrice,
 };
 
 const actions = {
