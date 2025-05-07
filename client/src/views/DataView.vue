@@ -8,6 +8,7 @@
         <SeatPrefGraph />
         <TicketPriceSeatType />
       </div>
+      <div class="ai-graph-area"></div>
     </div>
 </template>
 
