@@ -8,7 +8,9 @@
         <SeatPrefGraph />
         <TicketPriceSeatType />
       </div>
-      <div class="ai-graph-area"></div>
+      <div class="ai-graph-area">
+        <!-- Linear Regression Graph -->
+      </div>
     </div>
 </template>
 
