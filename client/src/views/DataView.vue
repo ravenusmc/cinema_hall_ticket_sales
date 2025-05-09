@@ -10,6 +10,7 @@
       </div>
       <div class="ai-graph-area">
         <!-- Linear Regression Graph -->
+         <!-- Other AI graphs -->
       </div>
     </div>
 </template>
