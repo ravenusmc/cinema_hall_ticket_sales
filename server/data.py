@@ -3,6 +3,8 @@
 # importing supporting libraries
 import numpy as np
 import pandas as pd
+from sklearn.linear_model import LinearRegression
+
 
 class ExamineData():
 
@@ -76,9 +78,23 @@ class ExamineData():
         }
         box_data.append(summary)
     print(box_data)
+  
+  def linear_regression(self):
+    # Prepare the data
+    X = self.data[["Age"]].values  # Feature matrix
+    y = self.data["Ticket_Price"].values  # Target variable
+    # Fit the linear regression model
+    model = LinearRegression()
+    model.fit(X, y)
+    # Predict and display the regression results
+    slope = model.coef_[0]
+    intercept = model.intercept_
+    r_squared = model.score(X, y)
+    print(slope)
+
 
           
 
 obj = ExamineData()
-obj.ticket_price_by_seat_type()
+obj.linear_regression()
       
