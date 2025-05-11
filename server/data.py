@@ -91,10 +91,29 @@ class ExamineData():
     intercept = model.intercept_
     r_squared = model.score(X, y)
     print(slope)
-
-
+  
+  def build_age_ticket_price_graph(self):
+    # Drop rows with missing values in Age or Ticket_Price
+    df = self.data[["Age", "Ticket_Price"]].dropna()
+    # Reshape data for sklearn
+    X = df["Age"].values.reshape(-1, 1)
+    y = df["Ticket_Price"].values
+    # Fit linear regression model
+    model = LinearRegression()
+    model.fit(X, y)
+    # Create a sorted range of ages for plotting the regression line
+    age_range = np.linspace(df["Age"].min(), df["Age"].max(), 100).reshape(-1, 1)
+    predicted_prices = model.predict(age_range)
+    # Combine into a DataFrame for export to the frontend
+    regression_data = pd.DataFrame({
+        "Age": age_range.flatten(),
+        "Predicted_Ticket_Price": predicted_prices
+    })
+    # If you want to output as JSON for use in Vue.js
+    regression_json = regression_data.to_dict(orient="records")
+    print(regression_json)
           
 
 obj = ExamineData()
-obj.linear_regression()
+obj.build_age_ticket_price_graph()
       

@@ -1,6 +1,5 @@
 <template>
     <div>
-      hi
         <div ref="seatTicketPriceGraph"></div>
     </div>
 </template>
