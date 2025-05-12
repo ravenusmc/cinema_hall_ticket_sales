@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import axios from 'axios';
+import axios from 'axios';
 // import store from '@/store/index';
 
 Vue.use(Vuex);
@@ -48,21 +48,21 @@ const getters = {
 
 const actions = {
 
-	// submitSelectedYearToServer: ({ commit }, { payload }) => {
-	// 	commit('setYear', payload['year'])
-	// 	const path = 'http://localhost:5000/getDataForGraphs';
-	// 	axios.post(path, payload)
-	// 		.then((res) => {
-	// 			console.log(res.data)
-	// 			commit('setAverageAgaData', res.data['average_age_data'])
-	// 			commit('setDeathsByGroupData', res.data['deaths_by_group_data'])
-	// 			commit('setDeathsByRegionData', res.data['death_count_by_region'])
-	// 			commit('setDeathsOfPeopleInEventData', res.data['took_part_in_event'])
-	// 		})
-	// 		.catch((error) => {
-	// 			console.log(error);
-	// 		});
-	// },
+	getDataForGraphs: ({ commit }) => {
+		console.log('Action')
+		const path = 'http://localhost:5000/getDataForGraphs';
+		axios.post(path)
+			.then((res) => {
+				console.log(res.data)
+				commit('setAverageAgaData', res.data['average_age_data'])
+				commit('setDeathsByGroupData', res.data['deaths_by_group_data'])
+				commit('setDeathsByRegionData', res.data['death_count_by_region'])
+				commit('setDeathsOfPeopleInEventData', res.data['took_part_in_event'])
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	},
 };
 
 const mutations = {

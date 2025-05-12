@@ -9,8 +9,20 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "HomeView",
+  mounted() {
+    this.setUpDataForGraphs();
+  },  
+  methods: {
+    ...mapActions("datapage", ["getDataForGraphs"]),
+    setUpDataForGraphs() {
+      console.log("hi")
+      this.getDataForGraphs();
+    }
+  }
 };
 </script>
 
