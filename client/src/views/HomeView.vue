@@ -19,7 +19,6 @@ export default {
   methods: {
     ...mapActions("datapage", ["getDataForGraphs"]),
     setUpDataForGraphs() {
-      console.log("hi")
       this.getDataForGraphs();
     }
   }
