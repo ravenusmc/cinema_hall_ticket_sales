@@ -51,13 +51,10 @@ const actions = {
 	getDataForGraphs: ({ commit }) => {
 		console.log('Action')
 		const path = 'http://localhost:5000/getDataForGraphs';
-		axios.post(path)
+		axios.get(path)
 			.then((res) => {
 				console.log(res.data)
 				commit('setAverageAgaData', res.data['average_age_data'])
-				commit('setDeathsByGroupData', res.data['deaths_by_group_data'])
-				commit('setDeathsByRegionData', res.data['death_count_by_region'])
-				commit('setDeathsOfPeopleInEventData', res.data['took_part_in_event'])
 			})
 			.catch((error) => {
 				console.log(error);

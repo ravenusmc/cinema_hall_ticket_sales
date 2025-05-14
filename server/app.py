@@ -9,11 +9,11 @@ app.config.from_object(__name__)
 # enable CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-
-# sanity check route
-@app.route('/ping', methods=['GET'])
-def ping_pong():
-    return jsonify('pong!')
+#Route to get data
+@app.route('/getDataForGraphs', methods=['GET'])
+def getDataForGraphs():
+    print('boy')
+    return jsonify('5')
 
 
 if __name__ == '__main__':
