@@ -111,7 +111,7 @@ class ExamineData():
     })
     # If you want to output as JSON for use in Vue.js
     regression_json = regression_data.to_dict(orient="records")
-    print(regression_json)
+    return regression_json
           
 
 obj = ExamineData()
