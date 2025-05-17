@@ -9,7 +9,7 @@
         <TicketPriceSeatType />
       </div>
       <div class="ai-graph-area">
-        <!-- Linear Regression Graph -->
+        <AgeTicketPrice />
       </div>
     </div>
 </template>
@@ -20,6 +20,7 @@ import AgeGraph from '@/components/graphs/AgeGraph.vue'
 import RepeatCustomer from '@/components/graphs/RepeatCustomer.vue'
 import SeatPrefGraph from '@/components/graphs/SeatPrefGraph.vue'
 import TicketPriceSeatType from '@/components/graphs/TicketPriceSeatType.vue'
+import AgeTicketPrice from '@/components/graphs/AgeTicketPrice.vue'
 
 export default {
 	name: "DataView",
@@ -28,7 +29,8 @@ export default {
     AgeGraph,
     RepeatCustomer,
     SeatPrefGraph,
-    TicketPriceSeatType
+    TicketPriceSeatType,
+    AgeTicketPrice
   },
 };
 </script>

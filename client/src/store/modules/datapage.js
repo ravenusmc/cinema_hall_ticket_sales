@@ -36,6 +36,7 @@ const data = {
 		{'seat_type': 'Standard', 'min': 10.03, 'q1': 13.475000000000001, 'median': 16.67, 'q3': 21.26, 'max': 24.97}, 
 		{'seat_type': 'VIP', 'min': 10.03, 'q1': 13.585, 'median': 17.655, 'q3': 21.4175, 'max': 24.98}
 	],
+	ageTicketPriceData: [],
 };
 
 const getters = {
@@ -44,6 +45,7 @@ const getters = {
 	repeatCustomersData: (state) => state.repeatCustomersData,
 	seatPreferanceData: (state) => state.seatPreferanceData,
 	ticketPriceSeatPrice: (state) => state.ticketPriceSeatPrice,
+	ageTicketPriceData: (state) => state.ageTicketPriceData, 
 };
 
 const actions = {
@@ -54,7 +56,7 @@ const actions = {
 		axios.get(path)
 			.then((res) => {
 				console.log(res.data)
-				commit('setAverageAgaData', res.data['average_age_data'])
+				commit('setAgeTicketPriceData', res.data)
 			})
 			.catch((error) => {
 				console.log(error);
@@ -78,6 +80,10 @@ const mutations = {
 
 	setSeatPreferanceData(state, value) {
 		state.seatPreferanceData = value;
+	},
+
+	setAgeTicketPriceData(state, value) {
+		state.ageTicketPriceData = value;
 	}
 
 };
