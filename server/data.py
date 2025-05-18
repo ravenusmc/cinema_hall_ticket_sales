@@ -79,18 +79,19 @@ class ExamineData():
         box_data.append(summary)
     print(box_data)
   
-  def linear_regression(self):
-    # Prepare the data
-    X = self.data[["Age"]].values  # Feature matrix
-    y = self.data["Ticket_Price"].values  # Target variable
+  def linear_regression_basic(self):
+    X = self.data["Age"].tolist()  # 1D list of ages
+    y = self.data["Ticket_Price"].tolist()  # 1D list of prices
+    combined = [[x, y_val] for x, y_val in zip(X, y)]
+    return combined
     # Fit the linear regression model
-    model = LinearRegression()
-    model.fit(X, y)
+    # model = LinearRegression()
+    # model.fit(X, y)
     # Predict and display the regression results
-    slope = model.coef_[0]
-    intercept = model.intercept_
-    r_squared = model.score(X, y)
-    print(slope)
+    # slope = model.coef_[0]
+    # intercept = model.intercept_
+    # r_squared = model.score(X, y)
+    # print(slope)
   
   def build_age_ticket_price_graph(self):
     # Drop rows with missing values in Age or Ticket_Price
@@ -114,6 +115,6 @@ class ExamineData():
     return regression_json
           
 
-obj = ExamineData()
-obj.build_age_ticket_price_graph()
+# obj = ExamineData()
+# obj.linear_regression()
       
