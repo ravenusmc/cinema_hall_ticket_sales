@@ -16,7 +16,7 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 @app.route('/getDataForGraphs', methods=['GET'])
 def getDataForGraphs():
     db_obj = ExamineData()
-    regression_json = db_obj.linear_regression_basic()
+    regression_json = db_obj.build_age_ticket_price_graph()
     return jsonify(regression_json)
 
 

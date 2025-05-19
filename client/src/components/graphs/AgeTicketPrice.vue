@@ -20,6 +20,7 @@ export default {
   },  
   methods: {
     buildAgeTicketPriceDataGraph() {
+
       const margin = { top: 20, right: 30, bottom: 40, left: 50 };
       const width = 800 - margin.left - margin.right;
       const height = 400 - margin.top - margin.bottom;
@@ -73,6 +74,33 @@ export default {
         .attr('cy', d => y(d.Predicted_Ticket_Price))
         .attr('r', 3)
         .attr('fill', 'orange');
+      
+      // Add labels and title
+      svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr("x", width / 2)
+        .attr("y", height + margin.bottom - 10)
+        .attr("font-size", "12px")
+        .attr("font-weight", "bold")
+        .text("Age");
+      
+      svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -margin.left + 10)
+        .attr("font-size", "12px")
+        .attr("font-weight", "bold")
+        .text("Ticket Price");
+      
+      svg.append("text")
+        .attr("text-anchor", "middle")
+        .attr("x", width / 2)
+        .attr("y", -margin.top / 2 + 10)
+        .attr("font-size", "16px")
+        .attr("font-weight", "bold")
+        .text("Ticket Price Vs Age");
+
     }
   }
 
