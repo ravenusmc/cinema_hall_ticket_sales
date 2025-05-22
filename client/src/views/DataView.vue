@@ -10,6 +10,7 @@
       </div>
       <div class="ai-graph-area">
         <AgeTicketPrice />
+        <ExplainAgeTicketPrice />
       </div>
     </div>
 </template>
@@ -21,6 +22,7 @@ import RepeatCustomer from '@/components/graphs/RepeatCustomer.vue'
 import SeatPrefGraph from '@/components/graphs/SeatPrefGraph.vue'
 import TicketPriceSeatType from '@/components/graphs/TicketPriceSeatType.vue'
 import AgeTicketPrice from '@/components/graphs/AgeTicketPrice.vue'
+import ExplainAgeTicketPrice from '@/components/random/ExplainAgeTicketPrice.vue'
 
 export default {
 	name: "DataView",
@@ -30,7 +32,8 @@ export default {
     RepeatCustomer,
     SeatPrefGraph,
     TicketPriceSeatType,
-    AgeTicketPrice
+    AgeTicketPrice,
+    ExplainAgeTicketPrice,
   },
 };
 </script>
@@ -40,6 +43,11 @@ export default {
 .graph-area {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ai-graph-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border: 2px solid red; 
 }
 
