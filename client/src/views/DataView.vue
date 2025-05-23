@@ -48,7 +48,6 @@ export default {
 .ai-graph-area {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid red; 
 }
 
 </style>
