@@ -1,6 +1,6 @@
 <template>
   <div>
-      Explan.
+      <p></p>
   </div>
 </template>
 
