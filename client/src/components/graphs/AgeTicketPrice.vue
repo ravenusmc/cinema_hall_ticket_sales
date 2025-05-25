@@ -96,6 +96,37 @@ export default {
       .attr('stroke', 'steelblue')
       .attr('stroke-width', 2)
       .attr('d', line);
+
+    // Add title
+    svg
+      .append("text")
+      .attr("text-anchor", "middle")
+      .attr("x", width / 2)
+      .attr("y", -margin.top / 2 + 10) // Adjusted y position to be within the SVG
+      .attr("font-size", "16px")
+      .attr("font-weight", "bold")
+      .text("Age vs Ticket Price");
+    
+    // Add X axis label
+    svg
+      .append("text")
+      .attr("text-anchor", "middle")
+      .attr("x", width / 2)
+      .attr("y", height + margin.bottom - 10) // Adjusted y position to be within the SVG
+      .attr("font-size", "12px")
+      .attr("font-weight", "bold")
+      .text("Age");
+    
+    // Add Y axis label
+    svg
+      .append("text")
+      .attr("text-anchor", "middle")
+      .attr("transform", "rotate(-90)")
+      .attr("x", -height / 2)
+      .attr("y", -margin.left + 20)
+      .attr("font-size", "12px")
+      .attr("font-weight", "bold")
+      .text("Ticket Price");
     }
   }
 
