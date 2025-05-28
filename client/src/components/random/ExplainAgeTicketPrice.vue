@@ -24,13 +24,13 @@
 }
 
 .explanation-div {
-  border: 2px solid red;
   padding: 1.5rem;
   text-align: center;
   width: 85%;
   max-width: 600px;
-  background-color: #fff8f8;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 </style>

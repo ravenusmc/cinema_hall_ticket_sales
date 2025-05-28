@@ -1,6 +1,5 @@
 <template>
     <div>
-        4
         <div ref="seatPrefGraph"></div>
     </div>
 </template>
