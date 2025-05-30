@@ -10,7 +10,14 @@ Pie Chart: Proportion of Repeat Customers – Show how many customers purchased 
 Stacked Bar Chart: Seat Type Preference by Genre – Compare how many VIP vs. Standard seats were sold per genre.
 
 Simple AI-Enhanced Graphs
-Linear Regression: Age vs. Ticket Price – Use AI to predict ticket price trends based on age.
+Linear Regression: Age vs. Ticket Price – Use AI to predict ticket price trends based on age. - Done 
+
+-Age vs. Number_of_Person
+X: Age
+
+y: Number_of_Person
+
+Purpose: Do older or younger people tend to attend alone or in groups?
 
 Clustering (K-Means): Customer Segmentation – Group customers based on age, ticket price, and purchase behavior.
 

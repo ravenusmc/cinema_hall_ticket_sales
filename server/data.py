@@ -113,6 +113,9 @@ class ExamineData():
     # If you want to output as JSON for use in Vue.js
     regression_json = regression_data.to_dict(orient="records")
     return regression_json
+  
+  def age_versus_group_size(self):
+    pass
           
 
 # obj = ExamineData()
