@@ -4,7 +4,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LinearRegression
-
+import matplotlib.pyplot as plt
 
 class ExamineData():
 
@@ -115,9 +115,39 @@ class ExamineData():
     return regression_json
   
   def age_versus_group_size(self):
-    pass
-          
+    # Extract relevant columns
+    df = self.data[["Age", "Number_of_Person"]].copy()
+   
+   # Convert 'Alone' to 1 in Number_of_Person and cast to numeric
+    df["Number_of_Person"] = df["Number_of_Person"].replace("Alone", 1)
+    df["Number_of_Person"] = pd.to_numeric(df["Number_of_Person"], errors="coerce")
+    df["Age"] = pd.to_numeric(df["Age"], errors="coerce")
 
-# obj = ExamineData()
-# obj.linear_regression()
+    # Drop rows with missing or invalid values
+    df = df.dropna()
+
+    # Reshape data
+    X = df["Age"].values.reshape(-1, 1)
+    y = df["Number_of_Person"].values
+
+    # Linear regression model
+    model = LinearRegression()
+    model.fit(X, y)
+    y_pred = model.predict(X)
+
+    # Plot
+    plt.figure(figsize=(8, 6))
+    plt.scatter(X, y, color="blue", label="Actual Data")
+    plt.plot(X, y_pred, color="red", label="Best Fit Line")
+    plt.title("Age vs. Group Size")
+    plt.xlabel("Age")
+    plt.ylabel("Number of People (Alone = 1)")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+
+obj = ExamineData()
+obj.age_versus_group_size()
       
