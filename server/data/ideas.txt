@@ -19,6 +19,8 @@ y: Number_of_Person
 
 Purpose: Do older or younger people tend to attend alone or in groups?
 
+-I won't be building the below graphs: 
+
 Clustering (K-Means): Customer Segmentation – Group customers based on age, ticket price, and purchase behavior.
 
 Prediction Heatmap: Purchase Again Probability – Use a simple decision tree to estimate the likelihood of repeat purchases based on ticket price and seat type.
