@@ -17,7 +17,7 @@ X: Age
 
 y: Number_of_Person
 
-Purpose: Do older or younger people tend to attend alone or in groups?
+Purpose: Do older or younger people tend to attend alone or in groups? - This graph turned out to be useless as well. 
 
 -I won't be building the below graphs: 
 
