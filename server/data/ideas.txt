@@ -32,7 +32,7 @@ Good Reference Project:
 Link to graphs: 
 https://github.com/ravenusmc/israel_project/tree/main/client/src/components/graphs
 
-
+Maybe Include this: 
 Slope (Coefficient): 0.0129 – For each additional year of age, the ticket price increases by about 1.3 cents.
 
 Intercept: 16.88 – When age is 0, the predicted ticket price is approximately $16.88.
